@@ -38,7 +38,7 @@ def test_surface () :
   model = load_model()
   
   # Défintion de nos valeurs (taille de la maison, nombre de chambre, présence d'un jardin ou non)
-  X = [[-100, -3, 1]]
+  X = [[100, 3, 1]]
 
   # Prédiction du prix de la maison
   pred = model.predict(X)
