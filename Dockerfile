@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+WORKDIR /home/user
 
 RUN apt-get update && apt-get install -y python3
 RUN apt-get install -y python3-pip
