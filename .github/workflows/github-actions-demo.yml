@@ -22,7 +22,7 @@ jobs:
       #- run: streamlit run model_dashboard.py & #car ajout du docker build
 
       - run: docker build -t image_projet .
-      - run: docker run -p 8501:8501 image_projet
+      - run: docker run -p 8501:8501 -d image_projet
 
       # Le Cypress se connecte au stremlit qui est dans le conteneur
       - name: Cypress run
