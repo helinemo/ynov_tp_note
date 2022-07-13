@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: ls -la # Permet de voir que GIT ne récupère pas les fichiers de mon repo donc on ajout la première ligne
+      - run: python job.py
+      - run: pip install stramlit
+      - run: pip install jinja2
+      - run: pip install cypress
+
