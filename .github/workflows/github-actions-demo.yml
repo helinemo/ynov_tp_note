@@ -11,5 +11,6 @@ jobs:
       - run: npm install cypress
       - run: pip install pytest
       - run: pip install joblib
+      - run: pip install sklearn
       - run: pytest test_model.py
       - run: streamlit run test_cypress.py &
