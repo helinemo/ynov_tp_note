@@ -6,13 +6,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ls -la # Permet de voir que GIT ne récupère pas les fichiers de mon repo donc on ajout la première ligne
+
+      # Installation des librairies nécessaires
       - run: pip install streamlit
       - run: pip install -U Jinja2
       - run: npm install cypress
       - run: pip install pytest
       - run: pip install joblib
       - run: pip install sklearn
+
+      # Lancement des tests untaires
       - run: pytest test_model.py
+      
+      # Lancement des tests fonctionnels
       - run: streamlit run model_dashboard.py &
       - name: Cypress run
         uses: cypress-io/github-action@v4
