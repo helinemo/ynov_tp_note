@@ -8,9 +8,17 @@ def load_model():
 
 st.title('Prédiction de prix de maison')
 
-taille = st.number_input("Taille maison")
-nb_rooms = st.number_input("Nombre de chambre")
-garden = st.number_input("Y a un jardin")
+taille = st.number_input("Taille maison",
+                         step=1 #permet de mettre en integer
+                        )
+
+nb_rooms = st.number_input("Nombre de chambre",
+                            step=1 #permet de mettre en integer
+                        )
+
+garden = st.number_input("Y a un jardin",
+                            step=1 #permet de mettre en integer
+                        )
 
 model = load_model()
 
@@ -27,6 +35,7 @@ if taille > 0 and nb_rooms > 0:
         garden # Remplacement de -3 par garden
     ]]
     prediction = model.predict(X)
+
     ## afficher la prediction
-    st.write("le prix de la maison est : {}". format(prediction[0]))
+    st.write("le prix de la maison est : {}". format(int(prediction[0])))
 
