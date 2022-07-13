@@ -13,6 +13,6 @@ jobs:
       - run: pip install joblib
       - run: pip install sklearn
       - run: pytest test_model.py
-      - run: streamlit run test_cypress.py &
+      - run: streamlit run model_dashboard.py &
       - name: Cypress run
       uses: cypress-io/github-action@v4
