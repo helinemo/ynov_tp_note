@@ -17,8 +17,8 @@ jobs:
 
       # Lancement des tests untaires
       - run: pytest test_model.py
-      
+
       # Lancement des tests fonctionnels
       - run: streamlit run model_dashboard.py &
-      - name: Cypress run
+      - name: test_cypress/Cypress run
         uses: cypress-io/github-action@v4
