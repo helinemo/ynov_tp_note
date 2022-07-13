@@ -22,3 +22,5 @@ jobs:
       - run: streamlit run model_dashboard.py &
       - name: Cypress run
         uses: cypress-io/github-action@v4
+
+      - run: docker build -t image_projet .
