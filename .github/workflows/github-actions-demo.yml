@@ -20,5 +20,5 @@ jobs:
 
       # Lancement des tests fonctionnels
       - run: streamlit run model_dashboard.py &
-      - name: test_cypress/Cypress run
+      - name: Cypress run
         uses: cypress-io/github-action@v4
