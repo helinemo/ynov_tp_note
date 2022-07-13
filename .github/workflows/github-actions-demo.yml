@@ -9,5 +9,5 @@ jobs:
       - run: pip install streamlit
       - run: pip install jinja2
       - run: npm install cypress
-      - run: streamlit test_model.py
+      - run: streamlit run test_model.py &
 
